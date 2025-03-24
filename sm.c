@@ -33,7 +33,7 @@ int main()
     }
     else if (child_pid==0){
         shm_ptr=shmat(shmid,NULL,0);
-        if (shm_ptr== char* -1){
+        if (shm_ptr== (char*) -1){
             perror("shmat");
             exit(1);
         }
@@ -47,7 +47,7 @@ int main()
     }
     else{
         shm_ptr=shmat(shmid,NULL,0);
-        if (shm_ptr== char* -1){
+        if (shm_ptr== (char*) -1){
             perror("shmat");
             exit(1);
         }
